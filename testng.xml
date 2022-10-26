@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite">
+    <listeners>
+        <listener class-name="utils.Listener"/>
+    </listeners>
+    <parameter name="browser" value="edge"/>
+    <test name="LOC">
+        <groups>
+            <dependencies>
+                <group name="digitalcollections" depends-on="homepage"/>
+                <group name="survey" depends-on="digitalcollections"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="Tests.locTest">
+                <methods>
+                    <include name="checkHomeUrl"/>
+                    <include name="checkCarrousel"/>
+                    <include name="checkTopSearches"/>
+                    <include name="goToDigitalCollections"/>
+                </methods>
+            </class>
+            <class name="Tests.digitalCollectionsTest"/>
+            <class name="Tests.surveyTest"/>
+        </classes>
+    </test>
+    <test name="practicepagerahulshetty">
+        <classes>
+            <class name="Tests.PracticePageTest"/>
+        </classes>
+    </test>
+    <test name="demoqa">
+        <classes>
+            <class name="Tests.DemoQATest"/>
+        </classes>
+    </test>
+    <test name="apitest">
+        <classes>
+            <class name="API.RESTAssuredTest"/>
+        </classes>
+    </test>
+</suite>
