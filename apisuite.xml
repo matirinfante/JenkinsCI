@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite">
+    <test name="apitest">
+        <classes>
+            <class name="API.RESTAssuredTest"/>
+        </classes>
+    </test>
+</suite>

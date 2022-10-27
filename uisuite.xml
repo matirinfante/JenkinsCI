@@ -34,9 +34,4 @@
             <class name="Tests.DemoQATest"/>
         </classes>
     </test>
-    <test name="apitest">
-        <classes>
-            <class name="API.RESTAssuredTest"/>
-        </classes>
-    </test>
 </suite>
