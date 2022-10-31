@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DigitalCollectionsPage extends BasePage {
 
-    @FindBy(xpath = "//header[@class='collections-header']/h1")
+    @FindBy(xpath = "//div[@id='page-title']/h1")
     WebElement pDigitalCollectionHeader;
 
     @FindBy(id = "search")
